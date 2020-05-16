@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./binToDec.js"></script>
+    <link rel='stylesheet' href="./index.css"/>
+    <title>Bin2Dec</title>
+</head>
+<body>
+    <h1>Bin2Dec</h1>
+    <output name='dec' id='dec'></output>
+    <form oninput="dec.value = binToDec(bin.value) || 'Não é um número binário'">
+        <input id='bin' type="number" placeholder="Binário"> 
+        
+        <script>
+            document.querySelector('form').addEventListener('submit', (evt) => {
+                evt.preventDefault()
+            })
+        </script>  
+    </form>
+    
+</body>
+</html>
